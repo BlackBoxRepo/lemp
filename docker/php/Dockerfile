@@ -13,7 +13,9 @@ RUN yum -y update && \
         php-gd \
         php-intl \
         php-opcache \
-        php-devel && \
+        php-devel \
+        php-xml && \
+    yum -y install git && \
     yum clean all
 
 # Configure php
@@ -22,6 +24,11 @@ RUN sed -i 's/\;date\.timezone\ \=/date\.timezone\ \=\ America\/Denver/g' /etc/p
     sed -i '/^listen = /clisten = 0.0.0.0:9000' /etc/php-fpm.d/www.conf && \
     sed -i '/^listen.allowed_clients/c;listen.allowed_clients =' /etc/php-fpm.d/www.conf && \
     sed -i '/^;catch_workers_output/ccatch_workers_output = yes' /etc/php-fpm.d/www.conf
+
+# Install composer
+RUN curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer
+
 EXPOSE 9000
 
 CMD ["/usr/sbin/php-fpm", "--nodaemonize"]
