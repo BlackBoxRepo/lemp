@@ -11,7 +11,7 @@ To use
 4. Run ```vagrant up --no-parallel``` to start the entire stack or ```vagrant up %name%``` where %name% is the name of a cointainer below:
   - ```backend``` (php)
   - ```data``` (database storage)
-  - ```db``` (mariadb)
+  - ```db``` (mariadb, data container must be started first)
   - ```web``` (nginx)
   
 If you want to run commands such as phpunit or composer, you must first:
