@@ -14,7 +14,8 @@ RUN yum -y update && \
         php-intl \
         php-opcache \
         php-devel \
-        php-xml && \
+        php-xml \
+        php-apc && \
     yum -y install git && \
     yum clean all
 
