@@ -5,9 +5,10 @@ A Linux, nginx, mariadb, php vagrant/docker environment for running Symfony2 app
 
 To use
 ======
-1. Clone this repo to your local machine
-2. Copy (or symlink) your Symfony2 project into ```lemp/www```
-3. Run vagrant up --no-parallel to start the entire stack or vagrant up %name% to start a specific container listed below:
+1. Install Vagrant (and docker if you are on linux)
+2. Clone this repo to your local machine
+3. Copy (or symlink) your Symfony2 project into ```lemp/www```
+4. Run vagrant up --no-parallel to start the entire stack or vagrant up %name% to start a specific container listed below:
   - ```backend``` (php)
   - ```data``` (database storage)
   - ```db``` (mariadb)
