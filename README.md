@@ -1,7 +1,7 @@
 LEMP
 ================
 
-A Linux, nginx, mariadb, php vagrant/docker environment for running Symfony2 applications.
+A linux, nginx, mariadb, php vagrant/docker environment for running Symfony2 applications.
 
 To use
 ======
