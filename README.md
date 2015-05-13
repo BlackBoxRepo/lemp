@@ -8,7 +8,7 @@ To use
 1. Install Vagrant (and docker if you are on linux)
 2. Clone this repo to your local machine
 3. Copy (or symlink) your Symfony2 project into ```lemp/www```
-4. Run vagrant up --no-parallel to start the entire stack or vagrant up %name% to start a specific container listed below:
+4. Run ```vagrant up --no-parallel``` to start the entire stack or ```vagrant up %name%``` where %name% is the name of a cointainer below:
   - ```backend``` (php)
   - ```data``` (database storage)
   - ```db``` (mariadb)
